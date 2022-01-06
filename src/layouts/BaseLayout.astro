@@ -1,0 +1,26 @@
+---
+import LargeHeader from '../components/LargeHeader.astro';
+import Header from '../components/Header.astro';
+const {title = "KodamaSoft", lang = "en", header = "small"} = Astro.props;
+---
+
+<html lang={lang}>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+	<title>{title}</title>
+
+	<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+	<link rel="stylesheet" href={Astro.resolve('../styles/global.css')}>
+	<link rel="stylesheet" href={Astro.resolve('../styles/home.css')}>
+
+	<slot name="head"/>
+</head>
+<body>
+    { header === "large" ? <LargeHeader /> : <Header/> }
+	<main>
+        <slot name="content"/>
+	</main>
+</body>
+</html>
+
