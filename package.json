@@ -9,7 +9,11 @@
     "preview": "astro preview"
   },
   "devDependencies": {
-    "astro": "^0.22.6",
-    "@astrojs/renderer-vue": "^0.3.0"
+    "@astrojs/renderer-vue": "^0.3.0",
+    "astro": "^0.22.6"
+  },
+  "dependencies": {
+    "three": "^0.136.0",
+    "vanta": "^0.5.21"
   }
 }

@@ -1,0 +1,41 @@
+<header id="largeHeader">
+  <h1>KodamaSoft</h1>
+  <!-- <h2>section title if it exists lol</h2> -->
+</header>
+
+
+<script type="module">
+import FOG from 'vanta/dist/vanta.fog.min'
+
+var fogController = FOG({
+  el: "#largeHeader",
+  mouseControls: true,
+  touchControls: true,
+  gyroControls: false,
+  minHeight: 200.00,
+  minWidth: 200.00,
+  highlightColor: 0x7262AF,
+  midtoneColor: 0x211458,
+  lowlightColor: 0x33228e,
+  baseColor: 0x0
+})
+</script>
+
+<style>
+#largeHeader {
+  width: 100%;
+  text-align: center;
+  display: grid;
+  align-content: center;
+  place-items: center;
+  min-height: 50vh;
+  font-family: 'Audiowide';
+}
+
+#largeHeader h1{
+
+  -webkit-text-stroke-width: 0.1px;
+  -webkit-text-stroke-color: #8B6ABD;
+  font-size: 5em;
+}
+</style>
