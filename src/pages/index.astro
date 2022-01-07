@@ -3,7 +3,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro'
 import Tour from '../components/Tour.astro';
 ---
-<BaseLayout>
+<BaseLayout header="large">
 	<script slot="head" type="text/javascript" src={Astro.resolve('../js/lib/three.min.js')}></script>
-	<Tour slot="content"/>
+	<Tour/>
 </BaseLayout>

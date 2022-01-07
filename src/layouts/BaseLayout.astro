@@ -19,7 +19,7 @@ const {title = "KodamaSoft", lang = "en", header = "small"} = Astro.props;
 <body>
     { header === "large" ? <LargeHeader /> : <Header/> }
 	<main>
-        <slot name="content"/>
+        <slot/>
 	</main>
 </body>
 </html>
