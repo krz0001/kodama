@@ -1,0 +1,25 @@
+---
+import { Icon } from 'astro-icon'
+---
+
+<footer class="border-t border-slate-500/5 mt-10">
+    <div class="container max-w-4xl mx-auto flex py-8">
+        <div class="w-full mx-auto flex justify-center flex-wrap items-center gap-3">
+            <a href="" class="h-auto w-12">
+                <Icon pack="fa-brands" name="twitter" title="Twitter"/>
+            </a>
+            <a href="" class="h-auto w-12">
+                <Icon pack="fa-brands" name="bandcamp" title="Bandcamp"/>
+            </a>
+            <a href="" class="h-auto w-12">
+                <Icon pack="fa-brands" name="discord" title="Discord"/>
+            </a>
+        </div>
+    </div>
+</footer>
+
+<style>
+[astro-icon] {
+    @apply text-slate-500 no-underline hover:text-slate-50 transition;
+}
+</style>

@@ -1,9 +1,19 @@
 ---
 // Component Imports
 import BaseLayout from '../layouts/BaseLayout.astro'
-import Tour from '../components/Tour.astro';
+import { Markdown } from 'astro/components';
+
 ---
 <BaseLayout header="large">
-	<script slot="head" type="text/javascript" src={Astro.resolve('../js/lib/three.min.js')}></script>
-	<Tour/>
+	<Markdown class="prose prose-invert mx-auto">
+		## Welcome to KodamaSoft!
+
+		**KodamaSoft** is a small french amateur community crafting video games, visual novels, and music! A multitude of young writers, programmers, sound and visual artists are part of this group to create ambitious and interesting amateur projects! You can join us on Discord now and see all that for yourself, where we also organize community music albums where anyone can participate!
+
+		For now, you can check out our growing Discography, and Once Upon a Child, a visual novel made and written by Dream! Stellar Sanctuary is another project in development, scheduled to release someday!
+
+		There are a lot of other projects in development, and we hope you’ll be able to hear more from them soon enough!
+
+		This website is still a huge work in progress, but you can learn and see more from us on our Twitter and Discord to follow what’s been happening!
+	</Markdown>
 </BaseLayout>

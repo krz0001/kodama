@@ -1,24 +1,33 @@
-<header id="header">
-  <h1>KodamaSoft</h1>
-  <!-- <h2>section title if it exists lol</h2> -->
+
+---
+import Navbar from '../components/Navbar.astro'
+---
+<header id="largeHeader" class="bg-slate-900 w-100 overflow-hidden h-52 text-center flex flex-col select-none">
+  <h1 class="font-['Audiowide'] text-7xl	pt-8 grow">KodamaSoft</h1>
+  <Navbar />
 </header>
 
-<style>
-#header {
-  width: 100%;
-  text-align: center;
-  display: grid;
-  align-content: center;
-  place-items: center;
-  padding: 0.5rem 1rem;
-  font-family: 'Audiowide';
-  background: black;
-  user-select: none;
-  background: linear-gradient(177deg, #6d56cb 0%, #221d38 100%);
-}
 
-#header h1{
+<script type="module">
+import FOG from 'vanta/dist/vanta.fog.min'
+
+var fogController = FOG({
+  el: "#largeHeader",
+  mouseControls: true,
+  touchControls: true,
+  gyroControls: false,
+  minHeight: 200.00,
+  minWidth: 200.00,
+  highlightColor: 0x7262AF,
+  midtoneColor: 0x211458,
+  lowlightColor: 0x33228e,
+  baseColor: 0x0
+})
+</script>
+
+<style>
+
+#largeHeader h1{
   text-shadow: 0px 0px 20px #8b6abd;
-  font-size: 2.5em;
 }
 </style>

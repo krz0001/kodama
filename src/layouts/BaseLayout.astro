@@ -1,7 +1,7 @@
 ---
-import LargeHeader from '../components/LargeHeader.astro';
 import Header from '../components/Header.astro';
 import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
 const {title = "KodamaSoft", lang = "en", header = "small"} = Astro.props;
 ---
 
@@ -13,16 +13,16 @@ const {title = "KodamaSoft", lang = "en", header = "small"} = Astro.props;
 
 	<link rel="icon" type="image/x-icon" href="/favicon.ico" />
 	<link rel="stylesheet" href={Astro.resolve('../styles/global.css')}>
-	<link rel="stylesheet" href={Astro.resolve('../styles/home.css')}>
+	<script type="text/javascript" src={Astro.resolve('../js/lib/three.min.js')}></script>
 
 	<slot name="head"/>
 </head>
-<body>
-    { header === "large" ? <LargeHeader /> : <Header/> }
-	<Navbar />
-	<main>
+<body class="bg-slate-900 text-white">
+    <Header />
+	<main class="container pt-10 px-6 mx-auto">
         <slot/>
 	</main>
+	<Footer/>
 </body>
 </html>
 
