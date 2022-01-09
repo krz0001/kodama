@@ -1,0 +1,16 @@
+---
+const { name = 'Album', bandcamp, booth, website, vgmdb, thbwiki } = Astro.props;
+import { Icon } from 'astro-icon'
+
+---
+
+    <div>
+    <h2>{name}</h2>
+    <div>
+        <Icon name="bandcamp" />
+        <Icon name="booth" />
+        <Icon name="website" />
+        <Icon name="vgmdb" />
+        <Icon name="thbwiki" />   
+    </div>
+    </div>

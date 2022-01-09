@@ -6,6 +6,7 @@
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
+    "preview": "astro preview",
     "preview": "astro preview"
   },
   "devDependencies": {
@@ -16,6 +17,7 @@
   },
   "dependencies": {
     "astro-icon": "^0.5.3",
+    "prettier-plugin-astro": "^0.0.11",
     "three": "^0.136.0",
     "vanta": "^0.5.21"
   }

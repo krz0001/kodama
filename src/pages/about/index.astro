@@ -1,7 +1,20 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro'
+import { Markdown } from 'astro/components';
+
 ---
 
 <BaseLayout>
-    <h1 />About</h1>
+    <div class="prose prose-invert mx-auto">
+        <Markdown>
+            ## About us
+            Sint incididunt veniam enim et pariatur eiusmod. Nisi cillum incididunt consequat dolor. Ea do nisi commodo enim sint laboris minim incididunt minim duis mollit ut aliquip. Ex et ad dolor fugiat non sunt. Deserunt anim aute ex est nostrud tempor deserunt exercitation duis pariatur nisi irure mollit veniam. Occaecat nulla commodo id commodo pariatur sint. Ex sint ut ex dolor qui non in ad adipisicing amet.
+        </Markdown>
+
+        <Markdown>
+            ## Contact us
+
+            Your can send an email to us at: <a href="&#109;&#097;&#105;&#108;&#116;&#111;&#058;&#107;&#111;&#100;&#097;&#109;&#097;&#116;&#101;&#097;&#109;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;">&#109;&#097;&#105;&#108;&#116;&#111;&#058;&#107;&#111;&#100;&#097;&#109;&#097;&#116;&#101;&#097;&#109;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;</a> or reach out to us through our social media channels available down below!
+        </Markdown>
+    </div>
 </BaseLayout>

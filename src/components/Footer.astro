@@ -12,6 +12,9 @@ import { Icon } from 'astro-icon'
                 <Icon pack="fa-brands" name="bandcamp" title="Bandcamp"/>
             </a>
             <a href="" class="h-auto w-12">
+                <Icon pack="fa-brands" name="facebook" title="Facebook"/>
+            </a>
+            <a href="" class="h-auto w-12">
                 <Icon pack="fa-brands" name="discord" title="Discord"/>
             </a>
         </div>
@@ -20,6 +23,10 @@ import { Icon } from 'astro-icon'
 
 <style>
 [astro-icon] {
-    @apply text-slate-500 no-underline hover:text-slate-50 transition;
+    @apply text-slate-500 no-underline hover:text-slate-50 hover:scale-105 transition;
+}
+
+a:focus [astro-icon] {
+    @apply text-slate-50 scale-105 outline-none;
 }
 </style>
