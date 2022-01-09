@@ -1,10 +1,13 @@
 ---
-import Debug from 'astro/debug';
-import BaseLayout from '../../layouts/BaseLayout.astro'
-import albumsJson from 'discography.json'
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import AlbumListing from "../../components/AlbumListing.astro";
+import albumsJson from "../../../public/discography.json"
 ---
 
 <BaseLayout>
-    <h1>Discography</h1>
-    <Debug {albumsJson}/>
+    <div class="flex flex-wrap">
+        {albumsJson.map((albumObj) => (
+            <AlbumListing album={albumObj} />
+        ))}
+    </div>
 </BaseLayout>

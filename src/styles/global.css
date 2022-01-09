@@ -21,3 +21,16 @@
 		url('/assets/fonts/audiowide-v9-latin-regular.svg#Audiowide') format('svg');
 	/* Legacy iOS */
 }
+
+.kodama_btn {
+	@apply py-2 px-3 text-xs font-medium text-center text-white rounded-lg  focus:ring-4  flex transition;
+	@apply bg-slate-600 hover:bg-slate-700 focus:ring-slate-800;
+}
+
+.kodama_btn [astro-icon] {
+    @apply h-4 w-4 mr-2;
+}
+
+.kodama_btn--primary {
+	@apply bg-violet-600 hover:bg-violet-700 focus:ring-violet-800;
+}

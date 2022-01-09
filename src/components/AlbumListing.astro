@@ -1,16 +1,37 @@
 ---
-const { name = 'Album', bandcamp, booth, website, vgmdb, thbwiki } = Astro.props;
 import { Icon } from 'astro-icon'
-
+const { album } = Astro.props;
 ---
 
-    <div>
-    <h2>{name}</h2>
-    <div>
-        <Icon name="bandcamp" />
-        <Icon name="booth" />
-        <Icon name="website" />
-        <Icon name="vgmdb" />
-        <Icon name="thbwiki" />   
+<div class="overflow-visible relative max-w-xl mx-auto border-solid border border-violet-500/50 hover:border-violet-500 rounded-xl flex items-center gap-6 my-5 transition">
+    <img src={album.cover} class="absolute -left-6 w-52 h-52 rounded-md shadow-lg hover:-rotate-3 transition" alt="" srcset="">
+    <div class="flex flex-col py-5 pl-52">
+        <div>
+            <span class="font-mono text-sm">{album.id}</span>
+            <h2 class="text-2xl font-semibold">{album.name}</h2>
+        </div>
+        <div class="flex flex-wrap mt-4 gap-4">
+            <a href={album.bandcamp} class="kodama_btn kodama_btn--primary">
+                <Icon name="fa-brands:bandcamp" />
+                Bandcamp
+            </a>
+
+            <a href={album.booth} class="kodama_btn kodama_btn--primary">
+                <Icon name="booth" />
+                BOOTH
+            </a>
+
+            <a href={album.website} class="kodama_btn kodama_btn--primary">
+                <Icon name="mdi:web" />
+                Website
+            </a>
+
+            <a href={album.vgmdb} class="kodama_btn kodama_btn--primary">
+                VGMDB
+            </a>
+            { album.thbwiki ? <a href={album.thbwiki} class="kodama_btn kodama_btn--primary">
+                THB WIKI
+            </a> : null }
+        </div>
     </div>
-    </div>
+</div>

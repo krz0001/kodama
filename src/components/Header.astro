@@ -1,17 +1,17 @@
-
 ---
 import Navbar from '../components/Navbar.astro'
 ---
+
 <header id="largeHeader" class="bg-slate-900 w-100 overflow-hidden h-52 text-center flex flex-col select-none">
-  <h1 class="font-['Audiowide'] text-7xl	pt-8 grow">KodamaSoft</h1>
-  <Navbar />
+  <h1 class="font-['Audiowide'] text-7xl pt-8 grow">KodamaSoft</h1>
+  <Navbar/>
 </header>
 
 
 <script type="module">
 import FOG from 'vanta/dist/vanta.fog.min'
 
-var fogController = FOG({
+FOG({
   el: "#largeHeader",
   mouseControls: true,
   touchControls: true,
