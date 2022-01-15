@@ -29,9 +29,11 @@ const { album } = Astro.props;
             <a href={album.vgmdb} class="kodama_btn kodama_btn--primary">
                 VGMDB
             </a>
-            { album.thbwiki ? <a href={album.thbwiki} class="kodama_btn kodama_btn--primary">
+            { album.thbwiki ? 
+            <a href={album.thbwiki} class="kodama_btn kodama_btn--primary">
                 THB WIKI
-            </a> : null }
+            </a> 
+            : null }
         </div>
     </div>
 </div>
