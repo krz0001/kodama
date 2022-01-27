@@ -1,0 +1,9 @@
+---
+const { project } = Astro.props;
+---
+
+<a class="bg-slate-800 w-full text-center p-10" href={project.url}>
+    <img src={project.background} class="" alt="" srcset="">
+    <img src={project.logo} class="" alt="" srcset="">
+    <h3>{project.name}</h3></a>  
+</a>

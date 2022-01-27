@@ -1,7 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro'
 import { Markdown } from 'astro/components';
-const data = Astro.fetchContent('../blog/*.md'); 
 ---
 
 <BaseLayout>
@@ -12,15 +11,5 @@ const data = Astro.fetchContent('../blog/*.md');
         </Markdown>
     </section>
 
-    <section class="prose prose-invert mx-auto mt-7">
-        <h2>Our latest blog posts</h2> 
-
-        {data.slice(0, 3).map((post) => (
-            <article class="bg-violet-700/20 p-4 my-4 rounded-md ">
-                <h3 class="mt-0">{post.title}</h3>
-                <p> by {post.author} · {post.date}</p>
-                <a href={post.url}>Read more</a>
-            </article>
-        ))} 
-    </section>
+    
 </BaseLayout>
