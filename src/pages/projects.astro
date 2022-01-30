@@ -1,0 +1,16 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ProjectListing from "../components/ProjectListing.astro";
+import projectsJson from "../../public/projects.json"
+---
+
+<BaseLayout>
+    <section class="prose prose-invert mx-auto mt-7 mb-4">
+        <h2>Our current projects</h2> 
+    </section>
+    <div class="flex flex-wrap max-w-3xl mx-auto gap-4">
+        {projectsJson.map((projectObj) => (
+            <ProjectListing project={projectObj} />
+        ))}
+    </div>
+</BaseLayout>

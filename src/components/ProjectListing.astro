@@ -2,8 +2,12 @@
 const { project } = Astro.props;
 ---
 
-<a class="bg-slate-800 w-full text-center p-10" href={project.url}>
-    <img src={project.background} class="" alt="" srcset="">
-    <img src={project.logo} class="" alt="" srcset="">
-    <h3>{project.name}</h3></a>  
+<a class="relative group bg-slate-800 w-full text-center rounded-md overflow-hidden h-28" href={project.url}>    
+    <img src={project.background} class="block w-full h-full absolute blur-lg group-hover:blur object-cover transition" onerror="this.style.display='none'">
+    <div class="relative h-full inset-0 group-hover:scale-105 transition">
+        { project.logo ?
+            <img src={project.logo} class="max-h-full max-w-full mx-auto" alt="" srcset=""> :
+            <h3 class="font-mono text-2xl m-10 subpixel-antialiased">{project.name}</h3></a>  
+        }
+    </div>
 </a>

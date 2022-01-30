@@ -1,4 +1,9 @@
 [{
     "name": "ECLECTIC RESONANCE",
+    "url": "https://kodamasoft.wordpress.com/home/eclectic-resonance/",
+    "background": "../assets/projects/vantablack/bg.png",
+    "logo": "../assets/projects/vantablack/logo_v2.png"
+},{
+    "name": "ECLECTIC RESONANCE",
     "url": "https://kodamasoft.wordpress.com/home/eclectic-resonance/"
 }]
