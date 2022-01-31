@@ -1,0 +1,16 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import GameListing from "../../components/GameListing.astro";
+import gamesJson from "../../../public/games.json"
+---
+
+<BaseLayout>
+    <section class="prose prose-invert mx-auto mt-7 mb-4">
+        <h2>Our current projects</h2> 
+    </section>
+    <div class="flex flex-wrap max-w-3xl mx-auto gap-4">
+        {gamesJson.map((gameObj) => (
+            <GameListing game={gameObj} />
+        ))}
+    </div>
+</BaseLayout>
