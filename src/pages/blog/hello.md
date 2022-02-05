@@ -1,8 +1,7 @@
 ---
-# src/pages/index.md
 layout: ../../layouts/BlogPostLayout.astro
 title: Cool test blogpost
-date: Saturday, January 15 2022
+date: 2022-02-04T19:51:23+0000
 author: kerouz
 ---
 

@@ -2,7 +2,7 @@
 # src/pages/index.md
 layout: ../../layouts/BlogPostLayout.astro
 title: Vantablack released!
-date: Saturday, January 15 2022
+date: 2021-12-30T00:00:00+00:00
 author: Robin
 ---
 
