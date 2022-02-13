@@ -1,0 +1,10 @@
+---
+import { DateTime } from "luxon";
+const { blogpost } = Astro.props;
+---
+
+<article class="bg-violet-700/20 p-4 my-4 rounded-md ">
+    <h3 class="mt-0">{blogpost.title}</h3>
+    <p class="flex"> by {blogpost.author} · Published {DateTime.fromISO(blogpost.date).setLocale('en').toRelativeCalendar()}</p>
+    <a href={blogpost.url}>Read more</a>
+</article>

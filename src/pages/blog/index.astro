@@ -1,6 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro'
-
+import BlogPost from '../../components/BlogPost.astro'
 import { DateTime } from "luxon";
 const data = Astro.fetchContent('../blog/*.md'); 
 ---
@@ -9,12 +9,8 @@ const data = Astro.fetchContent('../blog/*.md');
     <section class="prose prose-invert mx-auto">
         <h2>Blog</h2> 
 
-        {data.slice(0, 3).map((post) => (
-            <article class="bg-violet-700/20 p-4 my-4 rounded-md ">
-                <h3 class="mt-0">{post.title}</h3>
-                <p>by {post.author} · Published {DateTime.fromISO(post.date).setLocale('en').toRelativeCalendar()}</p>
-                <a href={post.url}>Read more</a>
-            </article>
+        {data.map((post) => (
+			<BlogPost blogpost={post} />
         ))} 
     </section>
 </BaseLayout>

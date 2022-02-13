@@ -1,6 +1,7 @@
 ---
 // Component Imports
 import BaseLayout from '../layouts/BaseLayout.astro'
+import BlogPost from "../components/BlogPost.astro";
 import { DateTime } from "luxon";
 import { Markdown } from 'astro/components';
 const data = Astro.fetchContent('./blog/*.md'); 
@@ -24,11 +25,7 @@ const data = Astro.fetchContent('./blog/*.md');
         <h2>Our latest blog posts</h2> 
 
         {data.slice(0, 3).map((post) => (
-            <article class="bg-violet-700/20 p-4 my-4 rounded-md ">
-                <h3 class="mt-0">{post.title}</h3>
-                <p> by {post.author} · Published {DateTime.fromISO(post.date).setLocale('en').toRelativeCalendar()}</p>
-                <a href={post.url}>Read more</a>
-            </article>
+			<BlogPost blogpost={post} />
         ))} 
     </section>
 </BaseLayout>
