@@ -1,6 +1,12 @@
+
 {
-    "key_1": "Japanese content 1",
-    "key_2": "German content 2",
-    "key_3": "{{what}} is {{how}} coool!!!!!!"
+  "kodamasoft":"KodamaSoft",
+  "navbar": {
+      "home": "ホーム",
+      "blog": "ブログ",
+      "discography": "ディスコグラフィー",
+      "projects": "プロジェクト",
+      "about": "約"
   }
+}
   

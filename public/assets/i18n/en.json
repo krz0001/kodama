@@ -1,6 +1,11 @@
-{
-    "key_1": "English content 1",
-    "key_2": "English content 2",
-    "key_3": "{{what}} is {{how}}"
+{   
+    "kodamasoft":"KodamaSoft",
+    "navbar": {
+        "home": "Home",
+        "blog": "Blog",
+        "discography": "Discography",
+        "projects": "Projects",
+        "about": "About"
+    }
 }
   

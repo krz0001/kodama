@@ -27,11 +27,15 @@ window.updateContent = function()  {
     localize("html");
 }
 
-window.changeLng = function(evt)  {
-    const selectedLang = evt ? evt : "en";
+window.changeLng = function(event)  {
+    const selectedLang = event.target.value ? event.target.value : "en";
     i18next.changeLanguage(selectedLang).then((t) => {
         updateContent();
     });
 }
 
-i18next
+const languageSwitcherElt = document.querySelector('#language-switcher');
+
+languageSwitcherElt.addEventListener('change', (event) => {
+    changeLng(event)
+});
