@@ -13,15 +13,19 @@ const {title = "KodamaSoft"} = Astro.props;
 	<link rel="icon" type="image/x-icon" href="/favicon.ico" />
 	<link rel="stylesheet" href={Astro.resolve('../styles/global.css')}>
 	<script type="text/javascript" src={Astro.resolve('../js/lib/three.min.js')}></script>
+	<script type="module" src={Astro.resolve('../js/scripts/i18n.js')}></script>
 
 	<slot name="head"/>
 </head>
 <body class="bg-slate-900 text-white">
     <Header />
 	<main class="container pt-10 px-6 mx-auto">
+		<div data-i18n="key_1"></div>
         <slot/>
 	</main>
 	<Footer/>
 </body>
 </html>
+
+
 

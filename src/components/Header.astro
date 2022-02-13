@@ -2,9 +2,14 @@
 import Navbar from '../components/Navbar.astro'
 ---
 
-<header id="largeHeader" class="bg-slate-900 w-100 overflow-hidden h-52 text-center flex flex-col select-none">
+<header id="largeHeader" class="relative bg-slate-900 w-100 overflow-hidden h-52 text-center flex flex-col select-none">
   <h1 class="font-['Audiowide'] text-7xl pt-8 grow">KodamaSoft</h1>
   <Navbar/>
+  
+  <select id="language-switcher" class="absolute top-3 right-3 bg-gray-900/50 text-gray-300 hover:bg-gray-700/50 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition">
+    <option value="en">English</option>
+    <option value="jp">日本語</option>
+  </select>
 </header>
 
 
