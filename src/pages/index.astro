@@ -2,11 +2,10 @@
 // Component Imports
 import BaseLayout from '../layouts/BaseLayout.astro'
 import BlogPost from "../components/BlogPost.astro";
-import { DateTime } from "luxon";
 import { Markdown } from 'astro/components';
 const data = Astro.fetchContent('./blog/*.md'); 
 ---
-<BaseLayout header="large">
+<BaseLayout>
 	<div class="prose prose-invert mx-auto">
 		<Markdown>
 			## Welcome to KodamaSoft!

@@ -1,25 +1,10 @@
 ---
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
+import BaseLayout from './BaseLayout.astro';
 import { DateTime } from "luxon";
-const { title="KodamaSoft", content, lang = "en", header = "small"} = Astro.props;
+const { content } = Astro.props;
 ---
 
-<html lang={lang}>
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width">
-	<title>{title} - {content.title}</title>
-
-	<link rel="icon" type="image/x-icon" href="/favicon.ico" />
-	<link rel="stylesheet" href={Astro.resolve('../styles/global.css')}>
-	<script type="text/javascript" src={Astro.resolve('../js/lib/three.min.js')}></script>
-
-	<slot name="head"/>
-</head>
-<body class="bg-slate-900 text-white">
-    <Header />
-	<main class="container pt-10 px-6 mx-auto">
+<BaseLayout title={"KodamaSoft - " + content.title}>
 		<div class="max-w-prose	mx-auto border-b pb-4 mb-4 border-slate-500/50 sm:text-center">
 			<h2 class="text-4xl	font-extrabold mb-3">{content.title}</h2>
 			<p>Written by <span class="text-violet-500">{content.author}</span></p>
@@ -28,8 +13,4 @@ const { title="KodamaSoft", content, lang = "en", header = "small"} = Astro.prop
 		<div class="prose prose-invert mx-auto">
         	<slot/>
 		</div>
-	</main>
-	<Footer/>
-</body>
-</html>
-
+</BaseLayout>
