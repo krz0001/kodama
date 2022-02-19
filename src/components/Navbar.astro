@@ -1,9 +1,44 @@
+---
+import { Icon } from 'astro-icon'
+---
+
 <nav class="bg-gray-800/50 backdrop-blur">
-  <div class="flex justify-center p-4 gap-4">
-    <a class="text-gray-300 hover:bg-gray-700/50 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition" href="/" data-i18n="navbar.home">Home</a>
-    <a class="text-gray-300 hover:bg-gray-700/50 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition" href="/blog" data-i18n="navbar.blog">Blog</a>
-    <a class="text-gray-300 hover:bg-gray-700/50 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition" href="/discography" data-i18n="navbar.discography">Discography</a>
-    <a class="text-gray-300 hover:bg-gray-700/50 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition" href="/projects" data-i18n="navbar.projects">Projects</a>
-    <a class="text-gray-300 hover:bg-gray-700/50 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition" href="/about" data-i18n="navbar.about">About</a>
+      <button id="navbar-toggle" type="button" class="border border-gray-300/50 m-4 sm:hidden" onclick="toggleNavbar()">
+        <Icon name="icon-park-outline:hamburger-button" class="h-7"/>
+      </button>
+
+  <div id="navbar" class="hidden flex-col sm:flex-row justify-center p-4 gap-4">
+    <div class="flex flex-col sm:flex-row justify-center gap-4">
+      <a href="/" data-i18n="navbar.home">Home</a>
+      <a href="/blog" data-i18n="navbar.blog">Blog</a>
+      <a href="/discography" data-i18n="navbar.discography">Discography</a>
+      <a href="/projects" data-i18n="navbar.projects">Projects</a>
+      <a href="/about" data-i18n="navbar.about">About</a>
+    </div>
+    <select id="language-switcher" class="bg-gray-900/50 mx-auto sm:mx-0">
+      <option value="en">English</option>
+      <option value="jp">日本語</option>
+    </select>
   </div>
 </nav>
+
+<script>
+function toggleNavbar() {
+  var element = document.getElementById("navbar");
+  element.classList.toggle("hidden");
+}
+</script>
+
+<style>
+#navbar a, 
+#navbar-toggle,
+#language-switcher {
+   @apply text-gray-300 hover:bg-gray-700/50 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition;
+}
+
+#navbar {
+  @apply sm:flex;
+}
+</style>
+
+
