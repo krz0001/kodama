@@ -15,7 +15,7 @@ import { Icon } from 'astro-icon'
       <a href="/projects" data-i18n="navbar.projects">Projects</a>
       <a href="/about" data-i18n="navbar.about">About</a>
     </div>
-    <select id="language-switcher" class="bg-gray-900/50 mx-auto sm:mx-0">
+    <select id="language-switcher" class="bg-gray-900/50 mx-auto sm:mx-0 border-2 border-transparent ">
       <option value="en">English</option>
       <option value="jp">日本語</option>
     </select>
@@ -33,7 +33,7 @@ function toggleNavbar() {
 #navbar a, 
 #navbar-toggle,
 #language-switcher {
-   @apply text-gray-300 hover:bg-gray-700/50 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition;
+   @apply text-gray-300 hover:bg-gray-700/50 hover:text-white px-3 py-2 rounded-md text-sm font-medium border-2 border-transparent focus-visible:border-purple-600 focus-visible:outline-none transition;
 }
 
 #navbar {
