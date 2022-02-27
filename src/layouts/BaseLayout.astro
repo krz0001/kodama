@@ -12,12 +12,11 @@ const {title = "KodamaSoft"} = Astro.props;
 
 	<link rel="icon" type="image/x-icon" href="/favicon.ico" />
 	<link rel="stylesheet" href={Astro.resolve('../styles/global.css')}>
-	<script type="text/javascript" src={Astro.resolve('../js/lib/three.min.js')}></script>
 	<script type="module" src={Astro.resolve('../js/scripts/i18n.js')}></script>
 
 	<slot name="head"/>
 </head>
-<body class="bg-slate-900 text-white">
+<body class="bg-slate-900/80 text-white backdrop-blur-sm min-h-screen" style="">
     <Header />
 	<main class="container pt-10 px-6 mx-auto">
         <slot/>
@@ -26,5 +25,11 @@ const {title = "KodamaSoft"} = Astro.props;
 </body>
 </html>
 
+<style>
+
+html {
+	@apply bg-slate-900 bg-[url('public/assets/img/space_background.jpg')] bg-no-repeat bg-cover bg-center bg-fixed;
+}
+</style>
 
 

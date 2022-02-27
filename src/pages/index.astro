@@ -2,14 +2,14 @@
 // Component Imports
 import BaseLayout from '../layouts/BaseLayout.astro'
 import BlogPost from "../components/BlogPost.astro";
-import { Markdown } from 'astro/components';
 const data = Astro.fetchContent('./blog/*.md'); 
 ---
 <BaseLayout>
 	<div class="prose prose-invert mx-auto">
 		<h2 data-i18n="home.title">Welcome to KodamaSoft!</h2>
 
-		<p data-i18n="[html]home.content.1"><b>KodamaSoft</b> is a small french amateur community crafting video games, visual novels, and music! A multitude of young writers, programmers, sound and visual artists are part of this group to create ambitious and interesting amateur projects! You can join us on Discord now and see all that for yourself, where we also organize community music albums where anyone can participate!</p>
+		<p data-i18n="[html]home.content.1">
+		<b>KodamaSoft</b> is a small french amateur community crafting video games, visual novels, and music! A multitude of young writers, programmers, sound and visual artists are part of this group to create ambitious and interesting amateur projects! You can join us on Discord now and see all that for yourself, where we also organize community music albums where anyone can participate!</p>
 
 		<p data-i18n="[html]home.content.2">For now, you can check out our growing Discography, and Once Upon a Child, a visual novel made and written by Dream! Stellar Sanctuary is another project in development, scheduled to release someday!</p>
 

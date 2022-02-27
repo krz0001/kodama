@@ -1,9 +1,10 @@
-{   
-    "kodamasoft":"KodamaSoft",
+{
+    "kodamasoft": "KodamaSoft",
     "navbar": {
         "home": "Home",
         "blog": "Blog",
         "discography": "Discography",
+        "games": "Games",
         "projects": "Projects",
         "about": "About"
     },
@@ -15,7 +16,7 @@
         "published": "Published",
         "readmore": "Read more"
     },
-    "home":{
+    "home": {
         "title": "Welcome to KodamaSoft!",
         "content": {
             "1": "<b>KodamaSoft</b> is a small french amateur community crafting video games, visual novels, and music! A multitude of young writers, programmers, sound and visual artists are part of this group to create ambitious and interesting amateur projects! You can join us on Discord now and see all that for yourself, where we also organize community music albums where anyone can participate!",
@@ -26,4 +27,3 @@
         "blog_header": "Our latest blog posts"
     }
 }
-  

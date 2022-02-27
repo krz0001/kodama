@@ -19,8 +19,6 @@
     "i18next": "^21.6.11",
     "loc-i18next": "^0.1.4",
     "luxon": "^2.3.0",
-    "prettier-plugin-astro": "^0.0.11",
-    "three": "^0.136.0",
-    "vanta": "^0.5.21"
+    "prettier-plugin-astro": "^0.0.11"
   }
 }

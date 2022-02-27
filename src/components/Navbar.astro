@@ -2,7 +2,7 @@
 import { Icon } from 'astro-icon'
 ---
 
-<nav class="bg-gray-800/50 backdrop-blur">
+<nav class="bg-purple-900/30 backdrop-blur">
       <button id="navbar-toggle" type="button" class="border border-gray-300/50 m-4 sm:hidden" onclick="toggleNavbar()">
         <Icon name="icon-park-outline:hamburger-button" class="h-7"/>
       </button>
@@ -12,6 +12,7 @@ import { Icon } from 'astro-icon'
       <a href="/" data-i18n="navbar.home">Home</a>
       <a href="/blog" data-i18n="navbar.blog">Blog</a>
       <a href="/discography" data-i18n="navbar.discography">Discography</a>
+      <a href="/games" data-i18n="navbar.games">Games</a>
       <a href="/projects" data-i18n="navbar.projects">Projects</a>
       <a href="/about" data-i18n="navbar.about">About</a>
     </div>
@@ -33,7 +34,7 @@ function toggleNavbar() {
 #navbar a, 
 #navbar-toggle,
 #language-switcher {
-   @apply text-gray-300 hover:bg-gray-700/50 hover:text-white px-3 py-2 rounded-md text-sm font-medium border-2 border-transparent focus-visible:border-purple-600 focus-visible:outline-none transition;
+   @apply text-gray-300 hover:bg-purple-700/50 hover:text-white px-3 py-2 rounded-md text-sm font-medium border-2 border-transparent focus-visible:border-purple-600 focus-visible:outline-none transition;
 }
 
 #navbar {

@@ -2,31 +2,12 @@
 import Navbar from '../components/Navbar.astro'
 ---
 
-<header id="largeHeader" class="relative bg-slate-900 w-100 overflow-hidden h-auto text-center flex flex-col select-none">
+<header id="largeHeader" class="relative w-100 h-auto text-center flex flex-col select-none bg-[url('public/assets/img/space_background.jpg')] bg-center">
   <h1 class="font-['Audiowide'] text-7xl py-8 grow" data-i18n="kodamasoft">KodamaSoft</h1>
   <Navbar/>
 </header>
 
-
-<script type="module">
-import FOG from 'vanta/dist/vanta.fog.min'
-
-FOG({
-  el: "#largeHeader",
-  mouseControls: true,
-  touchControls: true,
-  gyroControls: false,
-  minHeight: 200.00,
-  minWidth: 200.00,
-  highlightColor: 0x7262AF,
-  midtoneColor: 0x211458,
-  lowlightColor: 0x33228e,
-  baseColor: 0x0
-})
-</script>
-
 <style>
-
 #largeHeader h1{
   text-shadow: 0px 0px 20px #8b6abd;
   font-size: clamp(2rem, -0.0930rem + 9.3023vw, 4.5rem);  
