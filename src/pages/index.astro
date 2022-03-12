@@ -2,7 +2,7 @@
 // Component Imports
 import BaseLayout from '../layouts/BaseLayout.astro'
 import BlogPost from "../components/BlogPost.astro";
-const data = Astro.fetchContent('./blog/*.md'); 
+const data = Astro.fetchContent('./blog/*/*.md'); 
 ---
 <BaseLayout>
 	<div class="prose prose-invert mx-auto">

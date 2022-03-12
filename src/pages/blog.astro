@@ -1,0 +1,17 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro'
+import BlogPost from '../components/BlogPost.astro'
+import { Debug } from 'astro/components';
+const data = Astro.fetchContent('../blog/*/*.md'); 
+---
+
+<BaseLayout>
+    <section class="prose prose-invert mx-auto">
+        <h2>Blog</h2> 
+
+        <!-- <Debug {data} /> -->
+        { data.map((post) => (
+			<BlogPost blogpost={post} />
+        ))} 
+    </section>
+</BaseLayout>

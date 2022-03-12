@@ -1,6 +1,6 @@
 ---
-layout: ../../layouts/BlogPostLayout.astro
-title: Cool test blogpost
+layout: ../../../layouts/BlogPostLayout.astro
+title: こんにちは!
 date: 2022-02-04T19:51:23+0000
 author: kerouz
 ---
