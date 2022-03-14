@@ -2,6 +2,8 @@
 import BaseLayout from './BaseLayout.astro';
 import { DateTime } from "luxon";
 const { content } = Astro.props;
+
+console.log(content)
 ---
 
 <BaseLayout title={"KodamaSoft - " + content.title}>
@@ -9,8 +11,26 @@ const { content } = Astro.props;
 			<h2 class="text-4xl	font-extrabold mb-3">{content.title}</h2>
 			<p>Written by <span class="text-violet-500">{content.author}</span></p>
 			<p class="text-slate-400">Published {DateTime.fromISO(content.date).setLocale('en').toRelativeCalendar()}</p>
+			{ content.twin ? <a id="twin-link" class="text-slate-400"></a> : null }
 		</div>
 		<div class="prose prose-invert mx-auto">
         	<slot/>
 		</div>
 </BaseLayout>
+
+<script>
+if (document.querySelector('#twin-link')) {
+	let twinLinkElt = document.querySelector('#twin-link');
+	let currentURL = window.location.href;
+
+	// check if current URL is english or japanese and if so change the link
+	if (currentURL.includes('/en/')) {
+		twinLinkElt.href = currentURL.replace('/en/', '/jp/');
+		twinLinkElt.innerHTML = 'Read in Japanese';
+	} else if (currentURL.includes('/jp/')) {
+		twinLinkElt.href = currentURL.replace('/jp/', '/en/');
+		twinLinkElt.innerHTML = 'Read in English';
+	}
+}
+
+</script>

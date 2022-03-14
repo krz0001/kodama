@@ -2,7 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro'
 import BlogPost from '../components/BlogPost.astro'
 import { Debug } from 'astro/components';
-const data = Astro.fetchContent('../blog/*/*.md'); 
+const data = Astro.fetchContent('./blog/*/*.md'); 
 ---
 
 <BaseLayout>
